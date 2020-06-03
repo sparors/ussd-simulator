@@ -1,7 +1,7 @@
 <p align="center">
-<img alt="Travis (.com)" src="https://img.shields.io/travis/com/sparors/ussd-simulator">
-<img alt="GitHub" src="https://img.shields.io/github/license/sparors/ussd-simulator">
-</p>
+<a href="https://travis-ci.com/sparors/ussd-simulator"><img alt="Travis (.com)" src="https://img.shields.io/travis/com/sparors/ussd-simulator"></a>
+<a href="https://github.com/sparors/ussd-simulator/blob/master/LICENSE"><img alt="GitHub" src="https://img.shields.io/github/license/sparors/ussd-simulator">
+</p></a>
 
 ## About Ussd Simulator
 
