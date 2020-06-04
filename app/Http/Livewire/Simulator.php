@@ -55,11 +55,9 @@ class Simulator extends Component
 
     public function getSessionId()
     {
-
         if ($this->sessionId === null) {
             $this->sessionId = bin2hex(random_bytes(5));
         }
-
         return $this->sessionId;
     }
 
