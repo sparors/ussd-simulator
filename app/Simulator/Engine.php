@@ -33,7 +33,8 @@ class Engine
                     $sessionId,
                     $phoneNumber,
                     $network,
-                    $input
+                    $input,
+                    $sequence
                 )
             );
         }
