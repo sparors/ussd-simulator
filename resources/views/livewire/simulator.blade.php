@@ -14,29 +14,34 @@
                 <div>
                     <div>
                         <label>Host URL</label>
-                        <input type="url" name="url" />
+                        <input wire:model="url" type="url" name="url" placeholder="eg. https://a924d784.ngrok.io" />
                     </div>
                     <div>
                         <label>Method</label>
-                        <select name="method">
-                            <option value="get">GET</option>
-                            <option value="post">POST</option>
+                        <select wire:model="method" name="method">
+                            <option value="">Select request method</option>
+                            <option value="GET">GET</option>
+                            <option value="POST">POST</option>
                         </select>
                     </div>
                     <div>
                         <label>Network Operator</label>
-                        <select name="method">
-                            <option value="get">MTN</option>
-                            <option value="post">TIGO</option>
+                        <select wire:model="network" name="network">
+                            <option value="">select network operator</option>
+                            <option value="airteltigo">AirtelTigo</option>
+                            <option value="glo">Glo</option>
+                            <option value="mtn">MTN</option>
+                            <option value="vodafone">Vodafone</option>
                         </select>
                     </div>
                     <div>
-                        <label>Host URL</label>
-                        <input type="tel" name="phone_number" />
+                        <label>Phone Number</label>
+                        <input wire:model="phoneNumber" type="tel" name="phone_number" placeholder="eg. 0546628393" />
                     </div>
                     <div>
                         <label>Aggregator</label>
-                        <select name="method">
+                        <select wire:model="aggregator" name="aggregator">
+                            <option value="">Select aggregator</option>
                             <option value="korba">Korba</option>
                             <option value="nsano">Nsano</option>
                         </select>
@@ -46,15 +51,11 @@
             <div>
                 <div>
                     <div>
-                        <pre>
-                            <code>
-    
-                            </code>
-                        </pre>
+                        <pre><code>{{ $output }}</code></pre>
                         <h4>USSD Code</h4>
-                        <input type="text" name="input" />
-                        <button type="button">Send</button>
-                        <button type="button">Reset</button>
+                        <input wire:model="input" type="text" name="input" />
+                        <button type="button" wire:click="sendRequest">Send</button>
+                        <button type="button" wire:click="cancelRequest">Reset</button>
                     </div>
                 </div>
             </div>
