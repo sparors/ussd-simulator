@@ -10,14 +10,13 @@ class Simulator extends Component
 {
     public $sessionId;
     public $sequence;
-    public $url = 'https://ussd.korba365.com/api/ussd';
-    public $method = 'POST';
-    public $network = 'mtn';
-    public $phoneNumber = '0545112466';
-    public $aggregator = 'korba';
-    public $input = '*365#';
+    public $url;
+    public $method;
+    public $network;
+    public $phoneNumber;
+    public $aggregator;
+    public $input;
     public $output;
-    public $hasInput;
 
     public function sendRequest()
     {
@@ -38,10 +37,8 @@ class Simulator extends Component
             );
 
             $this->output = $response['message'];
-            $this->hasInput = $response['action'] === 'input' ? true : false;
         } catch(Exception $exception) {
             $this->output = "An Exception Occured\n{$exception->getMessage()}";
-            $this->hasInput = false;
         }
     }
 

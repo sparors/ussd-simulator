@@ -2,7 +2,7 @@
 
 namespace App\Simulator;
 
-class Korba implements Aggregator
+class Nsano implements Aggregator
 {
     public static function formRequest(
         $sessionId,
@@ -12,7 +12,7 @@ class Korba implements Aggregator
         $sequence
     ) {
         return [
-            'sessionID' => $sessionId,
+            'UserSessionID' => $sessionId,
             'msisdn' => '233' . substr($phoneNumber, 1),
             'network' => (function ($network) {
                 switch($network) {
@@ -32,16 +32,25 @@ class Korba implements Aggregator
                         return '00';
                 }
             })($network),
-            'ussdString' => $input,
-            'ussdServiceOp' => $sequence === 1 ? 1 : 18,
+            'msg' => $input,
         ];
     }
 
     public static function intepretResponse($response)
     {
         return [
-            'message' => $response['message'],
-            'action' => $response['ussdServiceOp'] === 2 ? 'input': 'prompt',
+            'message' => strlen($response['USSDResp']['menus']) === 0
+                ? $response['USSDResp']['title']
+                : $response['USSDResp']['title']
+                    . array_reduce(
+                        $response['USSDResp']['menus'],
+                        function ($carry, $item) {
+                            return $carry .= "\n$item";
+                        }
+                    ),
+            'action' => $response['USSDResp']['action'] == 'prompt'
+                ? 'prompt'
+                : 'input',
         ];
     }
 }

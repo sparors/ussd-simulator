@@ -74,6 +74,10 @@ class Engine
             return Korba::class;
         }
 
+        if ($aggregatorName === 'nsano') {
+            return Nsano::class;
+        }
+
         return null;
     }
 }
