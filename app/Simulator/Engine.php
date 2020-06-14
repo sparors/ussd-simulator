@@ -51,15 +51,6 @@ class Engine
                 )
             );
 
-            info(json_encode(
-                $aggregator::formRequest(
-                    $sessionId,
-                    $phoneNumber,
-                    $network,
-                    $input,
-                    $sequence
-                )
-                ));
         }
 
         if ($response === null) {

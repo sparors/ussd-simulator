@@ -19,14 +19,11 @@ class Korba implements Aggregator
                     case 'airteltigo':
                         return '06';
                     break;
-                    case 'glo':
-                        return '03';
-                    break;
                     case 'mtn':
                         return '01';
                     break;
                     case 'vodafone':
-                        return '07';
+                        return '02';
                     break;
                     default:
                         return '00';

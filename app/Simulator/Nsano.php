@@ -17,19 +17,19 @@ class Nsano implements Aggregator
             'network' => (function ($network) {
                 switch($network) {
                     case 'airteltigo':
-                        return '06';
+                        return 'AirtelTigo';
                     break;
                     case 'glo':
-                        return '03';
+                        return 'Glo';
                     break;
                     case 'mtn':
-                        return '01';
+                        return 'MTN';
                     break;
                     case 'vodafone':
-                        return '07';
+                        return 'Vodafone';
                     break;
                     default:
-                        return '00';
+                        return null;
                 }
             })($network),
             'msg' => $input,
@@ -39,7 +39,7 @@ class Nsano implements Aggregator
     public static function intepretResponse($response)
     {
         return [
-            'message' => strlen($response['USSDResp']['menus']) === 0
+            'message' => ! is_array($response['USSDResp']['menus'])
                 ? $response['USSDResp']['title']
                 : $response['USSDResp']['title']
                     . array_reduce(
