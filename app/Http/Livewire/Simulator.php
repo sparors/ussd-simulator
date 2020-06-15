@@ -3,6 +3,7 @@
 namespace App\Http\Livewire;
 
 use App\Simulator\Engine;
+use App\Simulator\NoFalseValue;
 use Exception;
 use Livewire\Component;
 
@@ -20,11 +21,11 @@ class Simulator extends Component
 
     public function sendRequest()
     {
-        if ($this->hasFalseValue()) {
-            return;
-        }
-
         try {
+            if ($this->hasFalseValue()) {
+                throw NoFalseValue::create();
+            }
+
             $response = Engine::run(
                 $this->getSessionId(),
                 $this->url,
@@ -45,7 +46,7 @@ class Simulator extends Component
     public function cancelRequest()
     {
         $this->sessionId = null;
-        $this->sequence = 0;
+        $this->sequence = null;
     }
     
     public function render()
@@ -58,15 +59,17 @@ class Simulator extends Component
         if ($this->sessionId === null) {
             $this->sessionId = bin2hex(random_bytes(5));
         }
+
         return $this->sessionId;
     }
 
     public function nextSequence()
     {
         if ($this->sequence === null) {
-            $this->sequence = 1;
+            $this->sequence = 0;
         }
-        return $this->sequence++;
+        
+        return ++$this->sequence;
     }
 
     public function hasFalseValue()
@@ -80,7 +83,10 @@ class Simulator extends Component
         }
 
         if (
-            ! in_array($this->network, ['airteltigo', 'glo', 'mtn', 'vodafone'])
+            ! in_array(
+                $this->network,
+                ['airteltigo', 'glo', 'mtn', 'vodafone']
+            )
         ) {
             return true;
         }
@@ -92,7 +98,12 @@ class Simulator extends Component
             return true;
         }
 
-        if (! in_array($this->aggregator, ['korba', 'nsano'])) {
+        if (
+            ! in_array(
+                $this->aggregator,
+                ['korba', 'nsano']
+            )
+        ) {
             return true;
         }
 
