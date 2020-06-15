@@ -1,21 +1,21 @@
 {{-- In work, do what you enjoy. --}}
 <div class="h-screen flex flex-col">
-    <div class="flex-1 px-40 py-12 bg-blue-600">
-        <h1>
-            <span class="bg-yellow-600 text-blue-600 p-2 rounded-md font-bold">USSD</span>
+    <div class="flex-1 px-40 py-12 bg-blue-700">
+        <h1 class="text-lg">
+            <span class="bg-yellow-600 text-blue-600 p-2 rounded-lg font-bold">USSD</span>
             <span class="text-white font-semibold">Simulator</span>
         </h1>
 
         <div class="flex h-full py-12">
             <div class="flex-1">
                 <div class="flex flex-col h-full justify-between">
-                    <h3 class="text-white font-semibold text-lg">
+                    <h3 class="text-white font-semibold text-2xl">
                         Intended for use by developers to test their
-                        endpoint implementations before integrations.
+                        endpoint implementations before integration.
                     </h3>
                     <div class="space-y-4">
                         <div class="flex items-center">
-                            <label class="w-32 text-white opacity-75">Host URL</label>
+                            <label class="w-32 font-semibold text-white opacity-75">Host URL</label>
                             <input class="form-input w-full max-w-xs bg-blue-500 border-none placeholder-white placeholder-opacity-75" wire:model="url" type="url" name="url" placeholder="eg. https://a924d784.ngrok.io" />
                         </div>
                         <div class="flex items-center">
@@ -51,8 +51,8 @@
                     </div>
                 </div>
             </div>
-            <div class="flex-none max-w-xs w-full">
-                <div class="bg-white h-full rounded-lg px-4 pt-4 pb-12">
+            <div class="flex-none max-w-xs w-full relative">
+                <div class="absolute bg-white h-full rounded-lg px-4 pt-4 pb-12 right-0 bottom-0 -mb-32 shadow-lg">
                     <div class="bg-gray-200 h-full rounded-lg">
                         <div class="flex flex-col h-full space-y-2 p-2">
                             <pre class="flex-1"><code>{{ $output }}</code></pre>
@@ -80,7 +80,7 @@
             </div>
         </div>
     </div>
-    <div class="flex-initial flex items-center justify-between py-12">
+    <div class="flex-initial flex items-center justify-between py-12 bg-gray-100">
         <div class="space-x-8 ml-40">
             <span>Made with &#9829; by</span>
             <span>yawmanford</span>
