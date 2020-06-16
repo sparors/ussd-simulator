@@ -85,15 +85,15 @@
             <span class="text-blue-700">Made with <span class="text-xl">&#9829;</span> by</span>
             <span>
                 <img class="inline-block w-10 h-10 rounded-full border border-gray-300" src="{{ config('app.env') === 'production' ? secure_asset('img/yawmanford.jpg') : asset('img/yawmanford.jpg') }}" />
-                <span>@yawmanford</span>
+                <a href="https://twitter.com/yawmanford" target="_blank">@yawmanford</a>
             </span>
             <span>
                 <img class="inline-block w-10 h-10 rounded-full border border-gray-300" src="{{ config('app.env') === 'production' ? secure_asset('img/isaacadzahsai.jpg') : asset('img/isaacadzahsai.jpg') }}" />
-                <span>@isaacadzahsai</span>
+                <a href="https://twitter.com/isaacadzahsai" target="_blank">@isaacadzahsai</a>
             </span>
             <span>
                 <img class="inline-block w-10 h-10 rounded-full border border-gray-300" src="{{ config('app.env') === 'production' ? secure_asset('img/maxxas.jpg') : asset('img/maxxas.jpg') }}" />
-                <span>@maxxsas</span>
+                <a href="https://twitter.com/maxxxsas" target="_blank">@maxxxsas</a>
             </span>
         </div>
         <div class="mr-12">
