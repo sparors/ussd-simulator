@@ -4,4 +4,20 @@
 
 /* Where to put customized types */
 
+.sim-label {
+    @apply w-32 font-semibold text-white font-bold opacity-75;
+}
+
+.sim-select {
+    @apply w-full max-w-md bg-blue-600 border-none py-3 text-white opacity-75;
+}
+
+.sim-input {
+    @apply w-full max-w-md bg-blue-600 border-none py-3 text-white opacity-75;
+}
+
+.sim-input:focus {
+    @apply opacity-100;
+}
+
 @tailwind utilities;

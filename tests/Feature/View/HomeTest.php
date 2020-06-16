@@ -27,7 +27,7 @@ class HomeTest extends TestCase
 
         $response->assertSee('yawmanford');
 
-        $response->assertSee('cybersai');
+        $response->assertSee('isaacadzahsai');
 
         $response->assertSee('maxxsas');
     }
