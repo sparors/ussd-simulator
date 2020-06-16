@@ -5,7 +5,6 @@
             <span class="bg-yellow-600 text-blue-700 p-2 rounded-lg font-bold">USSD</span>
             <span class="text-white font-semibold">Simulator</span>
         </h1>
-
         <div class="flex h-full py-12">
             <div class="flex-1">
                 <div class="flex flex-col h-full justify-between">
@@ -29,7 +28,7 @@
                         <div class="flex items-center">
                             <label class="sim-label">Network Operator</label>
                             <select class="form-select sim-select" wire:model="network" name="network">
-                                <option value="">select network operator</option>
+                                <option value="">Select network operator</option>
                                 <option value="airteltigo">AirtelTigo</option>
                                 <option value="glo">Glo</option>
                                 <option value="mtn">MTN</option>
@@ -55,7 +54,7 @@
                 <div class="absolute bg-white h-screen-80 w-full rounded-2xl px-4 pt-4 pb-12 right-0 bottom-0 -mb-32 shadow-xl">
                     <div class="bg-gray-200 h-full rounded-xl">
                         <div class="flex flex-col h-full space-y-2 p-2">
-                            <pre class="flex-1"><code class="font-ubuntu text-xs text-gray-700 leading-tight tracking-tight overflow-hidden">{{ $output }}</code></pre>
+                            <pre class="flex-1"><code class="font-ubuntu text-xs text-gray-700 leading-tight tracking-tight overflow-hidden whitespace-pre-line">{{ $output }}</code></pre>
                             <h4 class="text-blue-700 font-bold">USSD Code</h4>
                             <input class="form-input bg-gray-400 rounded-md text-gray-800" placeholder="eg.*721#" wire:model="input" type="text" name="input" />
                             <button class="py-2 px-4 bg-blue-700 focus:outline-none focus:shadow-outline rounded-md shadow-lg" type="button" wire:click="sendRequest">
