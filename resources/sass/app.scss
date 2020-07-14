@@ -5,19 +5,19 @@
 /* Where to put customized types */
 
 .sim-label {
-    @apply w-32 font-semibold text-white font-bold opacity-75;
-}
-
-.sim-select {
-    @apply w-full max-w-md bg-blue-600 border-none py-3 text-white opacity-75;
+    @apply w-32 text-white font-bold opacity-75 pr-4;
 }
 
 .sim-input {
-    @apply w-full max-w-md bg-blue-600 border-none py-3 text-white opacity-75;
+    @apply block w-full bg-blue-700 border-none py-3 text-white opacity-50;
+}
+
+.sim-select {
+    @apply block w-full bg-blue-700 border-none py-3 text-white opacity-50;
 }
 
 .sim-input:focus {
-    @apply opacity-100;
+    @apply opacity-100 bg-gray-100 text-blue-800;
 }
 
 @tailwind utilities;

@@ -38,7 +38,7 @@ class KorbaTest extends TestCase
 
         $this->assertEquals($request, [
             'sessionID' => $sessionId,
-            'msisdn' => '233' . substr($phoneNumber, 1),
+            'msisdn' => '+233' . substr($phoneNumber, 1),
             'network' => $networkValue,
             'ussdString'=> $input,
             'ussdServiceOp' => 1,
@@ -63,7 +63,7 @@ class KorbaTest extends TestCase
 
         $this->assertEquals($request, [
             'sessionID' => $sessionId,
-            'msisdn' => '233' . substr($phoneNumber, 1),
+            'msisdn' => '+233' . substr($phoneNumber, 1),
             'network' => $networkValue,
             'ussdString'=> $input,
             'ussdServiceOp' => 18,

@@ -13,7 +13,7 @@ class Korba implements Aggregator
     ) {
         return [
             'sessionID' => $sessionId,
-            'msisdn' => '233' . substr($phoneNumber, 1),
+            'msisdn' => '+233' . substr($phoneNumber, 1),
             'network' => (function ($network) {
                 switch($network) {
                     case 'airteltigo':
