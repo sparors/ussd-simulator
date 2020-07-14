@@ -20,4 +20,21 @@
     @apply opacity-100 bg-gray-100 text-blue-800;
 }
 
+::-webkit-scrollbar {
+    width: 0.15rem;
+    height: 0.15rem;
+}
+
+::-webkit-scrollbar-track {
+    @apply bg-gray-500 rounded-md;
+}
+
+::-webkit-scrollbar-thumb {
+    @apply bg-blue-800 rounded-md;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    @apply bg-blue-900;
+}
+
 @tailwind utilities;
