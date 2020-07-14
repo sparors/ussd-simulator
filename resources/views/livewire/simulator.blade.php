@@ -140,7 +140,7 @@
                             <div class="bg-white h-135 w-72 rounded-2xl px-3 pt-3 pb-8 shadow-xl -mb-12">
                                 <div class="bg-gray-200 h-full rounded-xl">
                                     <div class="flex flex-col h-full space-y-2 p-2">
-                                        <pre class="flex-1"><code class="text-xs text-gray-700 leading-tight tracking-tight overflow-hidden whitespace-pre-line">{{ $output }}</code></pre>
+                                        <pre class="flex-1"><code class="text-xs text-gray-700 leading-tight tracking-tight overflow-hidden whitespace-pre-wrap break-words">{{ $output }}</code></pre>
                                         <h4 class="text-blue-700 font-bold">USSD Code</h4>
                                         <div x-data="{ input: '' }" class="inline-block relative">
                                             <input x-bind:class="{ 'bg-gray-100 text-blue-800': input !== '', 'bg-gray-400': input === '' }" x-model="input" class="px-5 py-3 form-input rounded-md focus:bg-gray-100 w-full" placeholder="eg.*721#" wire:model="input" type="text" name="input" />
