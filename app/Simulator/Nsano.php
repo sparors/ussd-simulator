@@ -32,7 +32,7 @@ class Nsano implements Aggregator
                         return null;
                 }
             })($network),
-            'msg' => $input,
+            'msg' => str_replace("#", "", $input),
         ];
     }
 
