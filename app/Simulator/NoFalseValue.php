@@ -8,6 +8,6 @@ class NoFalseValue extends Exception
 {
     public static function create()
     {
-        return new static('No False Value Allowed');
+        return new static('Please check your request and try again.');
     }
 }

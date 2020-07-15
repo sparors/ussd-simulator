@@ -68,8 +68,8 @@ class SimulatorTest extends TestCase
             ->set('aggregator', $aggregator)
             ->set('input', $input)
             ->call('sendRequest')
-            ->assertSet('output', "An Exception Occured\nNo False Value Allowed")
-            ->assertSee("An Exception Occured\nNo False Value Allowed");
+            ->assertSet('output', "An Exception Occured\nPlease check your request and try again.")
+            ->assertSee("An Exception Occured\nPlease check your request and try again.");
     }
 
     public function testTheSessionIdCanBeReset()
