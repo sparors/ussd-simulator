@@ -47,6 +47,8 @@ class Simulator extends Component
     {
         $this->sessionId = null;
         $this->sequence = null;
+
+        return redirect()->route('home');
     }
     
     public function render()
