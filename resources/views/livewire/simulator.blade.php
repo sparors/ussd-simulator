@@ -1,6 +1,6 @@
 <div class="h-screen flex flex-col font-ubuntu">
     <div class="flex-1 px-32 bg-blue-800">
-        <div id="zoom" class="flex flex-col h-full">
+        <div class="flex flex-col h-full">
             <h1 class="text-lg flex-initial py-10">
                 <span class="bg-yellow-500 text-blue-800 p-2 rounded-lg font-bold">USSD</span>
                 <span class="text-white font-normal">Simulator</span>
