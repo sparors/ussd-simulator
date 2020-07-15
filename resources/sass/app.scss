@@ -2,22 +2,22 @@
 
 @tailwind components;
 
-/* Where to put customized types */
+/* Where to put customized styles */
 
 .sim-label {
-    @apply w-32 text-white font-bold opacity-75 pr-4;
+    @apply w-32 text-off-white font-bold pr-4;
 }
 
 .sim-input {
-    @apply block w-full bg-blue-700 border-none py-3 text-white opacity-50;
+    @apply block w-full bg-blue-light border-none py-3 text-off-white;
 }
 
 .sim-select {
-    @apply block w-full bg-blue-700 border-none py-3 text-white opacity-50;
+    @apply block w-full bg-blue-light border-none py-3 text-off-white;
 }
 
 .sim-input:focus {
-    @apply opacity-100 bg-gray-100 text-blue-800;
+    @apply bg-gray-100 text-blue;
 }
 
 ::-webkit-scrollbar {
@@ -30,11 +30,7 @@
 }
 
 ::-webkit-scrollbar-thumb {
-    @apply bg-blue-800 rounded-md;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    @apply bg-blue-900;
+    @apply bg-blue rounded-md;
 }
 
 @tailwind utilities;
