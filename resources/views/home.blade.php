@@ -10,6 +10,12 @@
         <script src="{{ config('app.env') === 'production' ? secure_asset('js/app.js') : asset('js/app.js') }}"></script>
         <!-- Styles -->
         <link href="{{ config('app.env') === 'production' ? secure_asset('css/app.css') : asset('css/app.css') }}" rel="stylesheet">
+        <style>
+            #zoom {
+                zoom: 0.9; /* all browsers */
+                -moz-transform: scale(0.9); /* firefox */
+            }
+        </style>
         <livewire:styles>
     </head>
     <body>
