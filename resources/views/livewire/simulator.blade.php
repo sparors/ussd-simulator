@@ -140,7 +140,7 @@
                             <div class="bg-white h-135 w-72 rounded-2xl px-3 pt-3 pb-8 shadow-xl -mb-12">
                                 <div class="bg-ash-light h-full rounded-xl">
                                     <div class="flex flex-col h-full space-y-2 p-2">
-                                        <pre class="flex-1 overflow-y-auto overflow-x-hidden"><code class="text-xs text-gray-700 leading-tight tracking-tight whitespace-pre-wrap break-words">{{ $output }}</code></pre>
+                                        <pre class="flex-1 overflow-y-auto overflow-x-hidden"><code class="text-xs text-gray-700 leading-tight tracking-tight whitespace-pre-wrap break-words" wire:loading.remove wire:target="sendRequest">{{ $output }}</code><p wire:loading wire:target="sendRequest">Loading...</p></pre>
                                         <div class="flex-none">
                                             <div class="flex flex-col space-y-2">
                                                 <h4 class="text-blue font-bold">USSD Code</h4>
