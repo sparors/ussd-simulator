@@ -70,6 +70,10 @@ class Engine
             return Nsano::class;
         }
 
+        if ($aggregatorName === 'nalo') {
+            return Nalo::class;
+        }
+
         return null;
     }
 }

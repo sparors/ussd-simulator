@@ -1,7 +1,7 @@
 <div class="h-screen flex flex-col font-ubuntu bg-gray-100">
     <div class="flex-shrink bg-blue">
         <div class="flex w-full max-w-screen-lg mx-auto flex-col h-full">
-            <h1 class="text-lg flex-initial py-10">
+            <h1 class="text-lg flex-none pt-8 pb-10">
                 <span class="bg-yellow text-blue p-2 rounded-lg font-bold">USSD</span>
                 <span class="text-white font-normal">Simulator</span>
             </h1>
@@ -111,6 +111,7 @@
                                     <div class="absolute inset-y-0 left-0 flex items-center">
                                         <img x-show="aggregator === 'korba'" class="inline-block w-6 h-6 ml-5" src="{{ config('app.env') === 'production' ? secure_asset('img/hubtel.png') : asset('img/hubtel.png') }}" />
                                         <img x-show="aggregator === 'nsano'" class="inline-block w-6 h-6 ml-5" src="{{ config('app.env') === 'production' ? secure_asset('img/nsano.png') : asset('img/nsano.png') }}" />
+                                        <img x-show="aggregator === 'nalo'" class="inline-block w-6 h-6 ml-5" src="{{ config('app.env') === 'production' ? secure_asset('img/hubtel.png') : asset('img/hubtel.png') }}" />
                                     </div>
                                     <input x-bind:class="{ 'pl-5': aggregator === '', 'pl-16 bg-gray-100 text-blue-800 opacity-100': aggregator !== '' }" x-model="aggregator" x-on:click="hide = false" class="form-input sim-select pr-12 cursor-pointer" wire:model="aggregator" type="text" name="aggregator" placeholder="Select request aggregator" autocomplete="off" readonly />
                                     <div class="absolute inset-y-0 right-0 flex items-center">
@@ -127,6 +128,12 @@
                                             <div x-on:click="aggregator = 'nsano';$dispatch('input', 'nsano');hide = true" class="flex px-5 py-3 cursor-pointer">
                                                 <img class="inline-block w-6 h-6" src="{{ config('app.env') === 'production' ? secure_asset('img/nsano.png') : asset('img/nsano.png') }}" />
                                                 <span class="ml-4 text-blue-800">nsano</span>
+                                            </div>
+                                        </div>
+                                        <div wire:model="aggregator">
+                                            <div x-on:click="aggregator = 'nalo';$dispatch('input', 'nalo');hide = true" class="flex px-5 py-3 cursor-pointer">
+                                                <img class="inline-block w-6 h-6" src="{{ config('app.env') === 'production' ? secure_asset('img/hubtel.png') : asset('img/hubtel.png') }}" />
+                                                <span class="ml-4 text-blue-800">Nalo</span>
                                             </div>
                                         </div>
                                     </div>
