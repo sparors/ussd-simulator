@@ -9,6 +9,7 @@ Ussd Simulator is a laravel application that help you test out your ussd endpoin
 
 - Korba
 - Nsano
+- Nalo
 
 ## Contributing
 
