@@ -103,7 +103,7 @@ class Simulator extends Component
         if (
             ! in_array(
                 $this->aggregator,
-                ['korba', 'nsano']
+                ['korba', 'nsano', 'nalo']
             )
         ) {
             return true;

@@ -14,7 +14,7 @@ class Nalo implements Aggregator
         return [
             'USERID' => 'nalotest',
             'MSISDN' => '233' . substr($phoneNumber, 1),
-            'USERDATA' => $input,
+            'USERDATA' => str_replace("#", "", $input),
             'MSGTYPE' => $sequence === 1 ? true : false,
             'NETWORK' => strtoupper($network),
         ];

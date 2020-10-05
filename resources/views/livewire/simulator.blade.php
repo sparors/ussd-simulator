@@ -109,9 +109,9 @@
                                 <label class="sim-label">Aggregator</label>
                                 <div x-data="{ aggregator: '', hide: true }" class="inline-block relative w-full max-w-sm z-10">
                                     <div class="absolute inset-y-0 left-0 flex items-center">
-                                        <img x-show="aggregator === 'korba'" class="inline-block w-6 h-6 ml-5" src="{{ config('app.env') === 'production' ? secure_asset('img/hubtel.png') : asset('img/hubtel.png') }}" />
+                                        <img x-show="aggregator === 'korba'" class="inline-block w-6 h-6 ml-5" src="{{ config('app.env') === 'production' ? secure_asset('img/korba.png') : asset('img/korba.png') }}" />
                                         <img x-show="aggregator === 'nsano'" class="inline-block w-6 h-6 ml-5" src="{{ config('app.env') === 'production' ? secure_asset('img/nsano.png') : asset('img/nsano.png') }}" />
-                                        <img x-show="aggregator === 'nalo'" class="inline-block w-6 h-6 ml-5" src="{{ config('app.env') === 'production' ? secure_asset('img/hubtel.png') : asset('img/hubtel.png') }}" />
+                                        <img x-show="aggregator === 'nalo'" class="inline-block w-6 h-6 ml-5" src="{{ config('app.env') === 'production' ? secure_asset('img/nalo.png') : asset('img/nalo.png') }}" />
                                     </div>
                                     <input x-bind:class="{ 'pl-5': aggregator === '', 'pl-16 bg-gray-100 text-blue-800 opacity-100': aggregator !== '' }" x-model="aggregator" x-on:click="hide = false" class="form-input sim-select pr-12 cursor-pointer" wire:model="aggregator" type="text" name="aggregator" placeholder="Select request aggregator" autocomplete="off" readonly />
                                     <div class="absolute inset-y-0 right-0 flex items-center">
@@ -120,7 +120,7 @@
                                     <div x-bind:class="{ 'hidden': hide === true }" x-on:click.away="hide = true" class="absolute bg-gray-100 inset-x-0 rounded-b">
                                         <div wire:model="aggregator">
                                             <div x-on:click="aggregator = 'korba';$dispatch('input', 'korba');hide = true" class="flex px-5 py-3 cursor-pointer">
-                                                <img class="inline-block w-6 h-6" src="{{ config('app.env') === 'production' ? secure_asset('img/hubtel.png') : asset('img/hubtel.png') }}" />
+                                                <img class="inline-block w-6 h-6" src="{{ config('app.env') === 'production' ? secure_asset('img/korba.png') : asset('img/korba.png') }}" />
                                                 <span class="ml-4 text-blue-800">korba</span>
                                             </div>
                                         </div>
@@ -132,8 +132,8 @@
                                         </div>
                                         <div wire:model="aggregator">
                                             <div x-on:click="aggregator = 'nalo';$dispatch('input', 'nalo');hide = true" class="flex px-5 py-3 cursor-pointer">
-                                                <img class="inline-block w-6 h-6" src="{{ config('app.env') === 'production' ? secure_asset('img/hubtel.png') : asset('img/hubtel.png') }}" />
-                                                <span class="ml-4 text-blue-800">Nalo</span>
+                                                <img class="inline-block w-6 h-6" src="{{ config('app.env') === 'production' ? secure_asset('img/nalo.png') : asset('img/nalo.png') }}" />
+                                                <span class="ml-4 text-blue-800">nalo</span>
                                             </div>
                                         </div>
                                     </div>
