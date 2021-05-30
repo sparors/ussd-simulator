@@ -10,6 +10,8 @@
         <script src="{{ config('app.env') === 'production' ? secure_asset('js/app.js') : asset('js/app.js') }}"></script>
         <!-- Styles -->
         <link href="{{ config('app.env') === 'production' ? secure_asset('css/app.css') : asset('css/app.css') }}" rel="stylesheet">
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-C4FKDMYK0B"></script>
         <livewire:styles>
     </head>
     <body>
@@ -23,5 +25,11 @@
                 window.livewire.emit('alive');
             }, 180000);
         })
+    </script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-C4FKDMYK0B');
     </script>
 </html>
